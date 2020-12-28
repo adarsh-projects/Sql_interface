@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="ISO-8859-1">
+	<title>Insert title here</title>
+</head>
+<body bgcolor="#1bc154">
+	<div align="center">
+		<h1 >SQL Editor</h1>
+		<button onclick="blackScreen()">Change Theme</button>
+	</div>
+	<form action="sql.jsp" method="post">
+		<div id="editor" align="center">
+			<textArea name="sqlCommond" rows="20" cols="100"></textArea><br>
+			<input type="submit" name="query" value="show data"/>
+			<input type="submit" name="table" value="Create Table"/>
+		</div>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.01/ace.js" type="text/javascript" charset="utf-8"></script>
+		<script>
+			/*function blackScreen(){
+				var editor = ace.edit("editor");
+				editor.setTheme("ace/theme/monokai");
+				editor.getSession().setMode("ace/mode/javascript");
+				document.getElementById("editor").style.height = "120px";	
+			}*/
+			const codebox = document.querySelector("[name=sqlCommond]")
+	
+			  codebox.addEventListener("keydown", (e) => {
+			    let { keyCode } = e;
+			    let { value, selectionStart, selectionEnd } = codebox;
+	
+			    if (keyCode === 9) {  // TAB = 9
+			      e.preventDefault();
+	
+			      codebox.value = value.slice(0, selectionStart) + "\t" + value.slice(selectionEnd);
+	
+			      codebox.setSelectionRange(selectionStart+2, selectionStart+2)
+			    }
+			  });
+		</script>
+	</form>
+</body>
+</html>

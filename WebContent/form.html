@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">	
+</head>
+<body>
+	<form action="HomePage.jsp" method="post">
+		<table align="center" border="0">
+			<tr>
+				<td colspan="2" align="center"><b>Register form</b></td>
+			</tr>
+			<tr>
+				<td><b>Id : </b></td>
+				<td><input type="number" name="id"/></td>
+			</tr>
+			<tr>
+				<td><b>Name : </b></td>
+				<td><input type="text" name="name"></td>
+			</tr>
+			<tr>
+				<td><b> Email : </b></td>
+				<td><input type="email" name="email"></td>
+			</tr>
+			<tr>
+				<td><b>Password : </b></td>
+				<td><input type="password" name="password"/></td>
+			</tr>
+			<tr>
+				<td><b>Confirm Password : </b></td>
+				<td><input type="password" name="cpsd"/></td>
+			</tr>
+			<tr>
+				<td><b>Sex : </b></td>
+				<td><input type="radio" name="sex" value="male">Male</input>
+				<input type="radio" name="sex" value="female">Female</input>
+				<input type="radio" name="sex", value="other">Other</input></td>
+			</tr>
+			<tr>
+				<td><b>country : </b></td>
+				<td>
+					<select name="country" style="width:155px">
+						<option value="none">None</option>
+						<option value="india">India</option>
+						<option value="australia">Australia</option>
+						<option vakue="usa">United State America</option>
+						<option value="japan">Japan</option>
+						<option value="uae">United Arab Emirates</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td align="center">
+					<b><input type="submit" name="submit" value="Submit" /></b>
+				</td>
+				<td align="left">
+					<b><input type="reset" value="Reset"/></b>
+				</td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>
